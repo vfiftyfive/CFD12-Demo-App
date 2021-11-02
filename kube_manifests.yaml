@@ -63,7 +63,7 @@ metadata:
     app: mongo
   name: mongodb
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: mongo
@@ -103,7 +103,7 @@ metadata:
   creationTimestamp: null
   name: add-data-to-mongodb
 spec:
-  backoffLimit: 4
+  backoffLimit: 10
   template:
     metadata:
       creationTimestamp: null
