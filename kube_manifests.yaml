@@ -63,7 +63,7 @@ metadata:
     app: mongo
   name: mongodb
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mongo
@@ -77,7 +77,7 @@ spec:
       - command:
         - mongod
         - --replSet
-        - rs0
+        - marvel-mongo
         image: mongo:3.4.1
         name: mongodb
         ports:
