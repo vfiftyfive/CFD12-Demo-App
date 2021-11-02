@@ -129,7 +129,7 @@ spec:
         - name: MONGO_HOST
           value: mongodb-0.mongodb.default.svc.cluster.local
         - name: OFFSET
-          value: "200"
+          value: "600"
         image: vfiftyfive/marvel_init_db
         name: add-data-to-mongodb
         resources: {}
