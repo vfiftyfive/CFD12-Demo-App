@@ -68,7 +68,7 @@ def reload():
                             image6_url=card6['image_url'],
                             name1=card1['name'], name2=card2['name'],
                             name3=card3['name'], name4=card4['name'],
-                            name3=card5['name'], name4=card6['name'],
+                            name5=card5['name'], name6=card6['name'],
                             seq1=card1['comic_list'], seq2=card2['comic_list'],
                             seq3=card3['comic_list'], seq4=card4['comic_list'],
                             seq5=card5['comic_list'], seq6=card6['comic_list'],)
