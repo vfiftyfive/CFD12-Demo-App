@@ -65,7 +65,7 @@ spec:
       - env:
         - name: MONGO_HOST
           value: mongodb-0.mongodb.default.svc.cluster.local
-        image: vfiftyfive/flask_marvel:1.0_test
+        image: vfiftyfive/flask_marvel
         name: flask-marvel
         ports:
         - containerPort: 80
