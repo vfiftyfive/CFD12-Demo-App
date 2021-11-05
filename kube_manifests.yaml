@@ -66,6 +66,7 @@ spec:
         - name: MONGO_HOST
           value: mongodb-0.mongodb.default.svc.cluster.local
         image: vfiftyfive/flask_marvel:1.0_test
+        imagePullPolicy: Always
         name: flask-marvel
         ports:
         - containerPort: 80
@@ -133,5 +134,5 @@ spec:
         image: vfiftyfive/marvel_init_db
         name: add-data-to-mongodb
         resources: {}
-      restartPolicy: Never
+      restartPolicy: Never  
 status: {}
