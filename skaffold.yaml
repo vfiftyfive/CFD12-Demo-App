@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata:
+  name: demo-marvel-app
+build:
+  artifacts:
+  - image: vfiftyfive/flask_marvel
+    custom:
+      buildCommand: docker buildx build --platform linux/amd64,linux/arm64 --push -t vfiftyfive/flask_marvel:1.0_test .
+deploy:
+  kubectl:
+    manifests:
+    - kube_manifests.yaml
