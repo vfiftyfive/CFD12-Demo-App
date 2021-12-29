@@ -6,8 +6,10 @@ build:
   artifacts:
   - image: vfiftyfive/flask_marvel
     custom:
-      buildCommand: docker buildx build --platform linux/amd64,linux/arm64 --push -t vfiftyfive/flask_marvel:1.0_test .
+      buildCommand: sh build.sh
+  local:
+    push: true
 deploy:
-  kubectl:
-    manifests:
-    - kube_manifests.yaml
+  kustomize:
+    paths: 
+    - "..ls/app_manifests/overlay/Dev"
